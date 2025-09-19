@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://controller.webservice.ws.java.webservice.com/"
+           xmlns:tns="http://controller.webservice.ws.java.webservice.com/"
+           elementFormDefault="qualified">
+
+    <xs:element name="getPolicyRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="policyNumber" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getPolicyResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="details" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="createPolicyRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="policyNumber" type="xs:string"/>
+                <xs:element name="holderName" type="xs:string"/>
+                <xs:element name="data" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="createPolicyResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="confirmation" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
